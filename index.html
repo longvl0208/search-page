@@ -8,37 +8,7 @@
         <script type="text/javascript" src="data.json"></script>
         <script type='text/javascript' src='main.js'></script>
         <script>
-              const debounce = (func, wait, immediate) => {
-                    console.log("inside debound");
-                    var timeout;
-
-                    return function executedFunction() {
-                        var context = this;
-                        var args = arguments;
-
-                        var later = function () {
-                            timeout = null;
-                            if (!immediate) func.apply(context, args);
-                        };
-
-                        var callNow = immediate && !timeout;
-
-                        clearTimeout(timeout);
-
-                        timeout = setTimeout(later, wait);
-
-                        if (callNow) func.apply(context, args);
-                    };
-                };
-                   function addListAfterKeypress(event) {
-                        if (inputLength() > 0 && event.which === 13) {
-                            //this now looks to see if you hit "enter"/"return"
-                            //the 13 is the enter key's keycode, this could also be display by event.keyCode === 13
-                            debounce(onSearch, 1000);
-                            // onSearch();
-                        }
-                    }
-                 input.addEventListener("keypress", addListAfterKeypress);
+             
         </script>
         <style></style>
     </head>
